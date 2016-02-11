@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet weak var loginNavBar: UIImageView!
+    
     @IBOutlet weak var loginScrollView: UIScrollView!
     
     @IBOutlet weak var fieldParentView: UIView!
@@ -50,6 +52,29 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        
+        loginNavBar.transform = transform
+        fieldParentView.transform = transform
+        
+        loginNavBar.alpha = 0
+        fieldParentView.alpha = 0
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+        
+            self.fieldParentView.transform = CGAffineTransformIdentity
+            self.loginNavBar.transform = CGAffineTransformIdentity
+            
+            self.fieldParentView.alpha = 1
+            self.loginNavBar.alpha = 1
+            
+        }
+    }
     func keyboardWillShow(notification: NSNotification!) {
         
         fieldParentView.frame.origin.y = initialYfieldParentView + offsetfieldParentView

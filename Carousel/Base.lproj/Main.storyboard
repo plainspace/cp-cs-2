@@ -49,7 +49,7 @@
                                         <rect key="frame" x="20" y="1066" width="278" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="xug-oU-Pcc" kind="modal" id="vHk-b4-QuW"/>
+                                            <segue destination="xug-oU-Pcc" kind="modal" animates="NO" id="vHk-b4-QuW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -147,6 +147,7 @@
                         <outlet property="activityIndicator" destination="Sd2-9b-ekW" id="YcQ-aM-hpL"/>
                         <outlet property="buttonParentView" destination="g6F-Zo-3UL" id="yET-8q-QqU"/>
                         <outlet property="fieldParentView" destination="rtI-Be-4C5" id="Hck-1d-7v6"/>
+                        <outlet property="loginNavBar" destination="5gQ-E7-e1j" id="zTG-2X-lgB"/>
                         <outlet property="loginScrollView" destination="WBL-3e-qjV" id="wdu-8N-rKv"/>
                     </connections>
                 </viewController>
