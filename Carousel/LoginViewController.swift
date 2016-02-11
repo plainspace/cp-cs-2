@@ -26,26 +26,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var signInButton: UIButton!
     
-//    func moveElementsUp() {
-//        UIView.animateWithDuration(0.3, animations: {
-//            self.fieldParentView.frame.origin.y = -10
-//            self.buttonParentView.frame.origin.y = 235
-//            print("Moving Elements Up")
-//            
-//            // Text fields and buttons move up to make room for the keyboard
-//        })
-//    }
-//    
-//    func moveElementsDown() {
-//        UIView.animateWithDuration(0.3, animations: {
-//            self.fieldParentView.frame.origin.y = 65
-//            self.buttonParentView.frame.origin.y = 450
-//            print("Moving Elements Down")
-//            
-//            // Text fields and buttons move up to make room for the keyboard
-//        })
-//    }
-    
     @IBAction func didTapSignInButton(sender: AnyObject) {
         
         print("Sign In Button Pressed")
@@ -70,13 +50,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         } else if emailField.text == "asdf" && passwordField.text == "asdf" {
             
             print("Checking email and password")
-            // print("Logging in")
             self.view.endEditing(true)
             self.activityIndicator.startAnimating()
             
             delay(2, closure: { () -> () in
                 
                 print("Logging in")
+                
+                self.activityIndicator.stopAnimating()
+                self.performSegueWithIdentifier("tutorialSegue", sender: nil)
                 
             })
             
@@ -198,12 +180,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         
         buttonParentView.frame.origin.y = initialYbuttonParentView + offsetbuttonParentView
         
-        // SignUpLink.hidden = true
-        
-//        self.SignUpLink.fadeOut()
-        
-        // print("move parent views up")
-        
     }
     
     func keyboardWillHide(notification: NSNotification!) {
@@ -211,17 +187,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         fieldParentView.frame.origin.y = initialYfieldParentView
         
         buttonParentView.frame.origin.y = initialYbuttonParentView
-        
-//        UIView.animateWithDuration(1.5, animations: {
-//            self.SignUpLink.alpha = 1.0
-//        })
-        
-        // SignUpLink.hidden = false
-        
-        // self.SignUpLink.fadeIn()
-        
-        
-        // print("move parent views down")
         
     }
     
