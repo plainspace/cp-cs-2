@@ -82,6 +82,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         print("move parent views down")
         
     }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= -50 {
+            view.endEditing(true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
