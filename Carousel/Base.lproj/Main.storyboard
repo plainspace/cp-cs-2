@@ -76,11 +76,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Sd2-9b-ekW">
-                                <rect key="frame" x="150" y="460" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="WBL-3e-qjV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="WBL-3e-qjV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -95,7 +91,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dXQ-Aa-d1h" userLabel="signInButton">
                                                 <rect key="frame" x="20" y="25" width="281" height="49"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didTapSignInButton:" destination="xug-oU-Pcc" eventType="touchUpInside" id="DOi-sm-4Nf"/>
+                                                </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="Sd2-9b-ekW">
+                                                <rect key="frame" x="257" y="31" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -115,13 +118,13 @@
                                                 <rect key="frame" x="20" y="110" width="281" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="Zh8-Ib-ysO">
                                                 <rect key="frame" x="20" y="155" width="281" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </view>
@@ -146,9 +149,12 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Sd2-9b-ekW" id="YcQ-aM-hpL"/>
                         <outlet property="buttonParentView" destination="g6F-Zo-3UL" id="yET-8q-QqU"/>
+                        <outlet property="emailField" destination="qvw-0V-UtP" id="Xm1-hV-SPC"/>
                         <outlet property="fieldParentView" destination="rtI-Be-4C5" id="Hck-1d-7v6"/>
                         <outlet property="loginNavBar" destination="5gQ-E7-e1j" id="zTG-2X-lgB"/>
                         <outlet property="loginScrollView" destination="WBL-3e-qjV" id="wdu-8N-rKv"/>
+                        <outlet property="passwordField" destination="Zh8-Ib-ysO" id="bRD-9S-9za"/>
+                        <outlet property="signInButton" destination="dXQ-Aa-d1h" id="e54-yY-mZy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzW-Wk-31b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +165,20 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="923" y="461"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="uxj-zk-PBW">
+            <objects>
+                <viewController id="1Xt-yf-wcR" userLabel="Tutorial View Controller" customClass="TutorialViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3o1-j2-7iJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vw-nc-nPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fv8-bo-3OV">
