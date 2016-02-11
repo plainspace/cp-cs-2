@@ -152,6 +152,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+    
         let transform = CGAffineTransformMakeScale(0.2, 0.2)
         
         loginNavBar.transform = transform
@@ -174,6 +175,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             
         }
     }
+    
     func keyboardWillShow(notification: NSNotification!) {
         
         fieldParentView.frame.origin.y = initialYfieldParentView + offsetfieldParentView

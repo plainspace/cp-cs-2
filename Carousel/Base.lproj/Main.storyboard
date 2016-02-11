@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="B5L-pU-WBG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pkm-qR-lWd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -104,6 +104,23 @@
                                 <color key="pageIndicatorTintColor" red="0.40000000000000002" green="0.75686274509803919" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.11372549019607843" green="0.60392156862745094" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
+                            <view contentMode="scaleToFill" id="mMZ-lE-IQz" userLabel="Spin Button Parent Container">
+                                <rect key="frame" x="960" y="455" width="320" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="backup_button" id="Qoa-TO-zEY">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ycv-1m-A2a">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="GKv-Cj-bPd" kind="modal" id="cKf-Bz-pBy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -111,12 +128,30 @@
                     <size key="freeformSize" width="1280" height="568"/>
                     <connections>
                         <outlet property="pageControl" destination="Kex-r5-cRS" id="tTG-sy-EJc"/>
+                        <outlet property="spinButton" destination="ycv-1m-A2a" id="0fv-xk-zKe"/>
+                        <outlet property="spinButtonImage" destination="Qoa-TO-zEY" id="3k4-zc-RJo"/>
+                        <outlet property="spinButtonParentContainer" destination="mMZ-lE-IQz" id="QOk-Am-bes"/>
                         <outlet property="tutorialScrollView" destination="ot1-Uz-wza" id="KNk-fs-YBN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhE-fe-dD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1818" y="177"/>
+        </scene>
+        <!--Image Timeline View Controller-->
+        <scene sceneID="b8g-NC-YDl">
+            <objects>
+                <viewController id="yfb-hz-5Rv" userLabel="Image Timeline View Controller" customClass="ImageTimelineViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95P-RS-3wA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0j-iy-QwT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQe-z5-7iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3221" y="177"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="eZi-1G-zfX">
@@ -235,8 +270,27 @@
             </objects>
             <point key="canvasLocation" x="-9" y="485"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F0c-CB-jkj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GKv-Cj-bPd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Bo-og-fKu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yfb-hz-5Rv" kind="relationship" relationship="rootViewController" id="B5I-hc-l3G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iI-pU-na7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689" y="177"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backup_button" width="320" height="97"/>
         <image name="create_text" width="320" height="63"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
