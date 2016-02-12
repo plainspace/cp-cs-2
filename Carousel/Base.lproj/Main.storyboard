@@ -227,11 +227,11 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="p7i-Q8-CUv" customClass="SettingsViewController" customModule="Carousel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGh-0T-ycj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="695"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="760"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="qIs-UQ-2Dx">
-                                <rect key="frame" x="0.0" y="65" width="320" height="695"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="760"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="settings" id="2D4-rf-PPf">
@@ -264,7 +264,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="695"/>
+                    <size key="freeformSize" width="320" height="760"/>
                     <connections>
                         <outlet property="didPressClose" destination="yRH-HS-IuH" id="PAc-Ow-i8M"/>
                         <outlet property="didPressSignOut" destination="mcL-9b-F0M" id="zB4-Qq-lsd"/>
@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4x-lu-39x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3929" y="514.5"/>
+            <point key="canvasLocation" x="4003" y="292.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="eZi-1G-zfX">
