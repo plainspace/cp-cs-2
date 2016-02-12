@@ -1,5 +1,5 @@
 //
-//  ImageTimelineViewController.swift
+//  SettingsViewController.swift
 //  Carousel
 //
 //  Created by Jared on 2/11/16.
@@ -8,25 +8,30 @@
 
 import UIKit
 
-class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
+class SettingsViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var imageTimelineScrollView: UIScrollView!
+    @IBOutlet weak var settingsScrollView: UIScrollView!
     
-    @IBOutlet weak var didTapConversationsButton: UIButton!
+    @IBOutlet weak var didPressClose: UIButton!
     
-    @IBAction func didTapConversationsButton(sender: AnyObject) {
+    @IBAction func didPressClose(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBOutlet weak var didPressSignOut: UIButton!
+    
+    @IBAction func didPressSignOut(sender: AnyObject) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1629)
+        settingsScrollView.contentSize = CGSize(width: 320, height: 760)
         
-        imageTimelineScrollView.delegate = self
+        settingsScrollView.delegate = self
         
-        performSegueWithIdentifier("conversationsSegue", sender: self)
-
-
+        performSegueWithIdentifier("signOutSegue", sender: self)
+        
         // Do any additional setup after loading the view.
     }
 

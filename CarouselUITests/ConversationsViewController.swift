@@ -1,5 +1,5 @@
 //
-//  ImageTimelineViewController.swift
+//  ConversationsViewController.swift
 //  Carousel
 //
 //  Created by Jared on 2/11/16.
@@ -8,24 +8,16 @@
 
 import UIKit
 
-class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
+class ConversationsViewController: UIViewController {
 
-    @IBOutlet weak var imageTimelineScrollView: UIScrollView!
+    @IBOutlet weak var didTapBack: UIButton!
     
-    @IBOutlet weak var didTapConversationsButton: UIButton!
-    
-    @IBAction func didTapConversationsButton(sender: AnyObject) {
+    @IBAction func didTapBack(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1629)
-        
-        imageTimelineScrollView.delegate = self
-        
-        performSegueWithIdentifier("conversationsSegue", sender: self)
-
 
         // Do any additional setup after loading the view.
     }

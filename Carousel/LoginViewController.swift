@@ -10,6 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet weak var didTapBackButton: UIButton!
+    
+    @IBAction func didTapBackButton(sender: AnyObject) {
+    }
+    
+//    @IBAction func didTapBackButton(sender: UIButton) {
+//    }
+//    
     @IBOutlet weak var loginNavBar: UIImageView!
     
     @IBOutlet weak var loginScrollView: UIScrollView!
@@ -131,6 +139,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        performSegueWithIdentifier("introViewSegue", sender: self)
         
         loginScrollView.delegate = self
         
