@@ -1,21 +1,20 @@
 //
-//  ConversationsViewController.swift
+//  ConversationsScreenViewController.swift
 //  Carousel
 //
-//  Created by Jared on 2/11/16.
+//  Created by Jared on 2/12/16.
 //  Copyright © 2016 plainspace. All rights reserved.
 //
 
 import UIKit
 
-class ConversationsViewController: UIViewController {
+class ConversationsScreenViewController: UIViewController {
 
-    @IBOutlet weak var didTapBack: UIButton!
-    
-    @IBAction func didTapBack(sender: AnyObject) {
+    @IBAction func didTouchBack(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
     }
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

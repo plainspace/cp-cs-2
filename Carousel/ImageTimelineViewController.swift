@@ -12,9 +12,8 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet weak var imageTimelineScrollView: UIScrollView!
     
-    @IBOutlet weak var didTapConversationsButton: UIButton!
-    
     @IBAction func didTapConversationsButton(sender: AnyObject) {
+    
     }
     
     override func viewDidLoad() {
@@ -23,8 +22,6 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
         imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1629)
         
         imageTimelineScrollView.delegate = self
-        
-        performSegueWithIdentifier("conversationsSegue", sender: self)
 
 
         // Do any additional setup after loading the view.

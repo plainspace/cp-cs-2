@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController, UIScrollViewDelegate {
         
         settingsScrollView.delegate = self
         
-        performSegueWithIdentifier("signOutSegue", sender: self)
+        // performSegueWithIdentifier("signOutSegue", sender: self)
         
         // Do any additional setup after loading the view.
     }

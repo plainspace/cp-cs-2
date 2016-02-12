@@ -10,14 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate {
     
-    @IBOutlet weak var didTapBackButton: UIButton!
-    
-    @IBAction func didTapBackButton(sender: AnyObject) {
-    }
-    
-//    @IBAction func didTapBackButton(sender: UIButton) {
-//    }
-//    
     @IBOutlet weak var loginNavBar: UIImageView!
     
     @IBOutlet weak var loginScrollView: UIScrollView!
@@ -34,6 +26,9 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var signInButton: UIButton!
     
+    @IBAction func didTouchBackButton(sender: AnyObject) {
+        // dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBAction func didTapSignInButton(sender: AnyObject) {
         
         print("Sign In Button Pressed")
@@ -66,7 +61,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 print("Logging in")
                 
                 self.activityIndicator.stopAnimating()
-                self.performSegueWithIdentifier("tutorialSegue", sender: nil)
+                // self.performSegueWithIdentifier("tutorialSegue", sender: nil)
                 
             })
             
@@ -139,8 +134,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        performSegueWithIdentifier("introViewSegue", sender: self)
         
         loginScrollView.delegate = self
         
