@@ -27,56 +27,57 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         tutorialScrollView.delegate = self
         
-        spinButtonParentContainer.alpha = 1
+        spinButtonImage.alpha = 0
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        
+        spinButtonImage.transform = transform
+        spinButtonImage.alpha = 0
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        UIView.animateWithDuration(0.3) { () -> Void in
+            
+            self.spinButtonImage.transform = CGAffineTransformIdentity
+            self.spinButtonImage.alpha = 1
+            
+        }
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         // Get the current page based on the scroll offset
         let page : Int = Int(round(scrollView.contentOffset.x / 320))
         
+        // Set the current page, so the dots will update
+        pageControl.currentPage = page
+        
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+        
+        spinButtonImage.transform = transform
+        spinButtonImage.alpha = 0
+        
         if page == 3 {
             pageControl.hidden = true
-//            UIView.animateWithDuration(0.3) { () -> Void in
-//                
-//                print("spin button showing")
-//
-//                self.spinButtonParentContainer.transform = CGAffineTransformIdentity
-//                
-//                self.spinButtonParentContainer.alpha = 1
-//                
-//            }
+            
+            UIView.animateWithDuration(0.3) { () -> Void in
+                
+                self.spinButtonImage.transform = CGAffineTransformIdentity
+                self.spinButtonImage.alpha = 1
+                
+            }
             
         } else {
             pageControl.hidden  = false
         }
         
-        // Set the current page, so the dots will update
-        pageControl.currentPage = page
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//    
-//        let transform = CGAffineTransformMakeScale(0.2, 0.2)
-//        
-//        spinButtonParentContainer.transform = transform
-//        
-//        spinButtonParentContainer.alpha = 0
-//        
-//    }
-//    
-//    override func viewDidAppear(animated: Bool) {
-//        
-//        UIView.animateWithDuration(0.3) { () -> Void in
-//            
-//            self.spinButtonParentContainer.transform = CGAffineTransformIdentity
-//            
-//            self.spinButtonParentContainer.alpha = 1
-//            
-//        }
-//    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
