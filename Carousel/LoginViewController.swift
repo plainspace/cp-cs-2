@@ -53,19 +53,18 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             
         } else if emailField.text == "asdf" && passwordField.text == "asdf" {
             
-            print("Logging in")
-            
             self.activityIndicator.startAnimating()
             
+            print("Logging in")
+
             delay(2, closure: { () -> () in
                 
                 self.activityIndicator.stopAnimating()
+                self.performSegueWithIdentifier("tutorialViewSegue", sender: self)
                 
                 print("Logged in")
                 
                 // self.view.endEditing(true)
-                
-                self.performSegueWithIdentifier("tutorialSegue", sender: self)
                 
             })
             
