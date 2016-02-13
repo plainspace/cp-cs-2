@@ -29,15 +29,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didTouchBackButton(sender: AnyObject) {
         // dismissViewControllerAnimated(true, completion: nil)
     }
+    
     @IBAction func didTapSignInButton(sender: AnyObject) {
         
         print("Sign In Button Pressed")
         
-        if emailField.text!.isEmpty && passwordField.text!.isEmpty {
+        if emailField.text == "" && passwordField.text == "" {
             
-            print("Alert! email and password are empty")
+            print("Email or password are missing")
             
-            let alertController = UIAlertController(title: "Whoops!", message: "You need to enter a name and password", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Whoops!", message: "You need to enter an email and password", preferredStyle: .Alert)
             
             // create a cancel action
             let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
@@ -49,29 +50,36 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             presentViewController(alertController, animated: true) {
                 // optional code for what happens after the alert controller has finished presenting
             }
-        
+            
         } else if emailField.text == "asdf" && passwordField.text == "asdf" {
             
-            print("Checking email and password")
-            self.view.endEditing(true)
+            print("Logging in")
+            
             self.activityIndicator.startAnimating()
             
             delay(2, closure: { () -> () in
                 
-                print("Logging in")
-                
                 self.activityIndicator.stopAnimating()
-                // self.performSegueWithIdentifier("tutorialSegue", sender: nil)
+                
+                print("Logged in")
+                
+                // self.view.endEditing(true)
+                
+                self.performSegueWithIdentifier("tutorialSegue", sender: self)
                 
             })
             
-        } else if emailField.text != nil || passwordField.text != nil {
+        } else {
             
-            print("Email or password are missing or incorrect")
+            self.activityIndicator.startAnimating()
             
-            if emailField.text!.isEmpty {
+            delay(2, closure: { () -> () in
                 
-                let alertController = UIAlertController(title: "Email required", message: "Please enter your email address", preferredStyle: .Alert)
+                self.activityIndicator.stopAnimating()
+                
+                print("Email or password are missing or incorrect")
+                
+                let alertController = UIAlertController(title: "Whoops!", message: "Wrong user name and password", preferredStyle: .Alert)
                 
                 // create a cancel action
                 let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
@@ -80,43 +88,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 // add the cancel action to the alertController
                 alertController.addAction(cancelAction)
                 
-                presentViewController(alertController, animated: true) {
+                self.presentViewController(alertController, animated: true) {
                     // optional code for what happens after the alert controller has finished presenting
                 }
                 
-            }
-            
-            if passwordField.text!.isEmpty {
-                
-                let alertController = UIAlertController(title: "Password required", message: "Please enter your password", preferredStyle: .Alert)
-                
-                // create a cancel action
-                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                    // handle cancel response here. Doing nothing will dismiss the view.
-                }
-                // add the cancel action to the alertController
-                alertController.addAction(cancelAction)
-                
-                presentViewController(alertController, animated: true) {
-                    // optional code for what happens after the alert controller has finished presenting
-                }
-                
-            } else {
-                
-                let alertController = UIAlertController(title: "Access denied", message: "Wrong user name and password", preferredStyle: .Alert)
-                
-                // create a cancel action
-                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                    // handle cancel response here. Doing nothing will dismiss the view.
-                }
-                // add the cancel action to the alertController
-                alertController.addAction(cancelAction)
-                
-                presentViewController(alertController, animated: true) {
-                    // optional code for what happens after the alert controller has finished presenting
-                }
-                
-            }
+            })
             
         }
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2458101C6EDE9200201778 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24580F1C6EDE9200201778 /* CreateViewController.swift */; };
+		7F2458121C6EEC6100201778 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2458111C6EEC6100201778 /* TermsViewController.swift */; };
 		7F3E092E1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */; };
 		7F4CAA251C6C7E7F0098EA7A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */; };
 		7F4CAA271C6CECD10098EA7A /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F24580F1C6EDE9200201778 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		7F2458111C6EEC6100201778 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsViewController.swift; path = ../TermsViewController.swift; sourceTree = "<group>"; };
 		7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsScreenViewController.swift; sourceTree = "<group>"; };
 		7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
@@ -191,11 +195,13 @@
 		7FF969C51C6C46A900887A82 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F2458111C6EEC6100201778 /* TermsViewController.swift */,
+				7F24580F1C6EDE9200201778 /* CreateViewController.swift */,
+				7FF969C61C6C547700887A82 /* LoginViewController.swift */,
 				7F4CAA2A1C6D8EF20098EA7A /* SettingsViewController.swift */,
 				7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */,
 				7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */,
 				7FF969C31C6C46A300887A82 /* IntroViewController.swift */,
-				7FF969C61C6C547700887A82 /* LoginViewController.swift */,
 				7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */,
 			);
 			name = "View Controllers";
@@ -348,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2458121C6EEC6100201778 /* TermsViewController.swift in Sources */,
+				7F2458101C6EDE9200201778 /* CreateViewController.swift in Sources */,
 				7FF969961C6C44DD00887A82 /* ViewController.swift in Sources */,
 				7F4CAA271C6CECD10098EA7A /* ImageTimelineViewController.swift in Sources */,
 				7FF969C21C6C45EC00887A82 /* Common.swift in Sources */,
