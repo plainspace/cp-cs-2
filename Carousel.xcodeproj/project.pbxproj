@@ -11,6 +11,19 @@
 		7F4CAA251C6C7E7F0098EA7A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */; };
 		7F4CAA271C6CECD10098EA7A /* ImageTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */; };
 		7F4CAA2B1C6D8EF20098EA7A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4CAA2A1C6D8EF20098EA7A /* SettingsViewController.swift */; };
+		7F8700FC1C6EA1D6002D200B /* Open Sans 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700EF1C6EA1D6002D200B /* Open Sans 300.ttf */; };
+		7F8700FD1C6EA1D6002D200B /* Open Sans 300italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F01C6EA1D6002D200B /* Open Sans 300italic.ttf */; };
+		7F8700FE1C6EA1D6002D200B /* Open Sans 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F11C6EA1D6002D200B /* Open Sans 600.ttf */; };
+		7F8700FF1C6EA1D6002D200B /* Open Sans 600italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F21C6EA1D6002D200B /* Open Sans 600italic.ttf */; };
+		7F8701001C6EA1D6002D200B /* Open Sans 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F31C6EA1D6002D200B /* Open Sans 700.ttf */; };
+		7F8701011C6EA1D6002D200B /* Open Sans 700italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F41C6EA1D6002D200B /* Open Sans 700italic.ttf */; };
+		7F8701021C6EA1D6002D200B /* Open Sans 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F51C6EA1D6002D200B /* Open Sans 800.ttf */; };
+		7F8701031C6EA1D6002D200B /* Open Sans 800italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F61C6EA1D6002D200B /* Open Sans 800italic.ttf */; };
+		7F8701041C6EA1D6002D200B /* Open Sans Condensed 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F71C6EA1D6002D200B /* Open Sans Condensed 300.ttf */; };
+		7F8701051C6EA1D6002D200B /* Open Sans Condensed 300italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F81C6EA1D6002D200B /* Open Sans Condensed 300italic.ttf */; };
+		7F8701061C6EA1D6002D200B /* Open Sans Condensed 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700F91C6EA1D6002D200B /* Open Sans Condensed 700.ttf */; };
+		7F8701071C6EA1D6002D200B /* Open Sans italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700FA1C6EA1D6002D200B /* Open Sans italic.ttf */; };
+		7F8701081C6EA1D6002D200B /* Open Sans regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8700FB1C6EA1D6002D200B /* Open Sans regular.ttf */; };
 		7FF969941C6C44DD00887A82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969931C6C44DD00887A82 /* AppDelegate.swift */; };
 		7FF969961C6C44DD00887A82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969951C6C44DD00887A82 /* ViewController.swift */; };
 		7FF969991C6C44DD00887A82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF969971C6C44DD00887A82 /* Main.storyboard */; };
@@ -45,6 +58,19 @@
 		7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTimelineViewController.swift; sourceTree = "<group>"; };
 		7F4CAA2A1C6D8EF20098EA7A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7F8700EF1C6EA1D6002D200B /* Open Sans 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 300.ttf"; sourceTree = "<group>"; };
+		7F8700F01C6EA1D6002D200B /* Open Sans 300italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 300italic.ttf"; sourceTree = "<group>"; };
+		7F8700F11C6EA1D6002D200B /* Open Sans 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 600.ttf"; sourceTree = "<group>"; };
+		7F8700F21C6EA1D6002D200B /* Open Sans 600italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 600italic.ttf"; sourceTree = "<group>"; };
+		7F8700F31C6EA1D6002D200B /* Open Sans 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 700.ttf"; sourceTree = "<group>"; };
+		7F8700F41C6EA1D6002D200B /* Open Sans 700italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 700italic.ttf"; sourceTree = "<group>"; };
+		7F8700F51C6EA1D6002D200B /* Open Sans 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 800.ttf"; sourceTree = "<group>"; };
+		7F8700F61C6EA1D6002D200B /* Open Sans 800italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans 800italic.ttf"; sourceTree = "<group>"; };
+		7F8700F71C6EA1D6002D200B /* Open Sans Condensed 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans Condensed 300.ttf"; sourceTree = "<group>"; };
+		7F8700F81C6EA1D6002D200B /* Open Sans Condensed 300italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans Condensed 300italic.ttf"; sourceTree = "<group>"; };
+		7F8700F91C6EA1D6002D200B /* Open Sans Condensed 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans Condensed 700.ttf"; sourceTree = "<group>"; };
+		7F8700FA1C6EA1D6002D200B /* Open Sans italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans italic.ttf"; sourceTree = "<group>"; };
+		7F8700FB1C6EA1D6002D200B /* Open Sans regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Open Sans regular.ttf"; sourceTree = "<group>"; };
 		7FF969901C6C44DD00887A82 /* Carousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF969931C6C44DD00887A82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF969951C6C44DD00887A82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +114,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F8701091C6EA1DE002D200B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F8700EF1C6EA1D6002D200B /* Open Sans 300.ttf */,
+				7F8700F01C6EA1D6002D200B /* Open Sans 300italic.ttf */,
+				7F8700F11C6EA1D6002D200B /* Open Sans 600.ttf */,
+				7F8700F21C6EA1D6002D200B /* Open Sans 600italic.ttf */,
+				7F8700F31C6EA1D6002D200B /* Open Sans 700.ttf */,
+				7F8700F41C6EA1D6002D200B /* Open Sans 700italic.ttf */,
+				7F8700F51C6EA1D6002D200B /* Open Sans 800.ttf */,
+				7F8700F61C6EA1D6002D200B /* Open Sans 800italic.ttf */,
+				7F8700F71C6EA1D6002D200B /* Open Sans Condensed 300.ttf */,
+				7F8700F81C6EA1D6002D200B /* Open Sans Condensed 300italic.ttf */,
+				7F8700F91C6EA1D6002D200B /* Open Sans Condensed 700.ttf */,
+				7F8700FA1C6EA1D6002D200B /* Open Sans italic.ttf */,
+				7F8700FB1C6EA1D6002D200B /* Open Sans regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7FF969871C6C44DC00887A82 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +165,7 @@
 				7FF9699A1C6C44DD00887A82 /* Assets.xcassets */,
 				7FF9699C1C6C44DD00887A82 /* LaunchScreen.storyboard */,
 				7FF9699F1C6C44DD00887A82 /* Info.plist */,
+				7F8701091C6EA1DE002D200B /* Resources */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -261,9 +308,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8701021C6EA1D6002D200B /* Open Sans 800.ttf in Resources */,
+				7F8701011C6EA1D6002D200B /* Open Sans 700italic.ttf in Resources */,
+				7F8701071C6EA1D6002D200B /* Open Sans italic.ttf in Resources */,
+				7F8700FE1C6EA1D6002D200B /* Open Sans 600.ttf in Resources */,
 				7FF9699E1C6C44DD00887A82 /* LaunchScreen.storyboard in Resources */,
+				7F8700FD1C6EA1D6002D200B /* Open Sans 300italic.ttf in Resources */,
+				7F8701001C6EA1D6002D200B /* Open Sans 700.ttf in Resources */,
 				7FF9699B1C6C44DD00887A82 /* Assets.xcassets in Resources */,
 				7FF969991C6C44DD00887A82 /* Main.storyboard in Resources */,
+				7F8701041C6EA1D6002D200B /* Open Sans Condensed 300.ttf in Resources */,
+				7F8701081C6EA1D6002D200B /* Open Sans regular.ttf in Resources */,
+				7F8701031C6EA1D6002D200B /* Open Sans 800italic.ttf in Resources */,
+				7F8701061C6EA1D6002D200B /* Open Sans Condensed 700.ttf in Resources */,
+				7F8700FF1C6EA1D6002D200B /* Open Sans 600italic.ttf in Resources */,
+				7F8701051C6EA1D6002D200B /* Open Sans Condensed 300italic.ttf in Resources */,
+				7F8700FC1C6EA1D6002D200B /* Open Sans 300.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

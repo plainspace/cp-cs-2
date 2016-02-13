@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Open Sans regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--IntroViewController-->
         <scene sceneID="PDE-KX-eGc">
@@ -21,28 +26,36 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Swipe up to continue..." textAlignment="center" id="DET-oR-94L">
+                                        <rect key="frame" x="40" y="302" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="z5T-EV-YhX">
                                         <rect key="frame" x="44" y="747" width="153" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="WjS-Ga-HP8">
-                                        <rect key="frame" x="196" y="747" width="76" height="75"/>
+                                        <rect key="frame" x="195" y="748" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="DCp-6j-5bW">
-                                        <rect key="frame" x="196" y="823" width="76" height="76"/>
+                                        <rect key="frame" x="195" y="822" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="4Qx-Kb-LHi">
-                                        <rect key="frame" x="45" y="897" width="76" height="76"/>
+                                        <rect key="frame" x="45" y="897" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="60x-oK-N88">
-                                        <rect key="frame" x="121" y="898" width="76" height="75"/>
+                                        <rect key="frame" x="119" y="896" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="EYK-Xx-Z3x">
-                                        <rect key="frame" x="196" y="898" width="76" height="75"/>
+                                        <rect key="frame" x="195" y="897" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o8u-Rf-dV8">
@@ -62,6 +75,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1136"/>
                     <connections>
+                        <outlet property="intro1View" destination="z5T-EV-YhX" id="Ll5-Ok-oft"/>
+                        <outlet property="intro2View" destination="WjS-Ga-HP8" id="dlU-nM-Dbc"/>
+                        <outlet property="intro3View" destination="DCp-6j-5bW" id="Cwa-mo-9kF"/>
+                        <outlet property="intro4View" destination="4Qx-Kb-LHi" id="bl5-YU-MHP"/>
+                        <outlet property="intro5View" destination="60x-oK-N88" id="AYU-cu-0pc"/>
+                        <outlet property="intro6View" destination="EYK-Xx-Z3x" id="LQd-DP-YGj"/>
                         <outlet property="introScrollView" destination="Awm-E9-85g" id="uzD-Qp-gVr"/>
                     </connections>
                 </viewController>
@@ -442,6 +461,6 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ghX-Y2-d3b"/>
+        <segue reference="K2B-9U-sqa"/>
     </inferredMetricsTieBreakers>
 </document>
