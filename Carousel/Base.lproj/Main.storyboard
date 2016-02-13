@@ -178,12 +178,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="oSM-Sb-Ib4">
-                                        <rect key="frame" x="0.0" y="65" width="320" height="1564"/>
+                                        <rect key="frame" x="0.0" y="87" width="320" height="1608"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scrubber" id="DZv-xa-8rf">
                                         <rect key="frame" x="0.0" y="1528" width="320" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="banner" id="Bzl-Ta-P7F">
+                                        <rect key="frame" x="0.0" y="65" width="319" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
                             </scrollView>
@@ -618,6 +622,7 @@
     </scenes>
     <resources>
         <image name="backup_button" width="320" height="97"/>
+        <image name="banner" width="319" height="44"/>
         <image name="check_box" width="20" height="20"/>
         <image name="check_box_selected" width="20" height="20"/>
         <image name="conversations" width="320" height="568"/>

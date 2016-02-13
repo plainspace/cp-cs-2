@@ -19,7 +19,7 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1629)
+        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1673)
         
         imageTimelineScrollView.delegate = self
 
