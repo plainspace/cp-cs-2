@@ -32,6 +32,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didTapSignInButton(sender: AnyObject) {
         
+        view.endEditing(false)
+        
+        print("Sign In Button Pressed")
+        
         if (emailField.text!.isEmpty) {
             
             let alertController = UIAlertController(title: "Email required", message: "Please enter your email address", preferredStyle: .Alert)
@@ -63,7 +67,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             }
             
         } else {
-        
+            
             self.activityIndicator.startAnimating()
             
             delay(2, closure: { () -> () in

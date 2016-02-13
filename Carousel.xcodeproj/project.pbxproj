@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F0806071C6FAEC8004BD521 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0806061C6FAEC8004BD521 /* Common.swift */; };
 		7F17F6A51C6FA9A3009BFF09 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17F6A41C6FA9A3009BFF09 /* TermsViewController.swift */; };
 		7F2458101C6EDE9200201778 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F24580F1C6EDE9200201778 /* CreateViewController.swift */; };
 		7F3E092E1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */; };
@@ -33,7 +34,6 @@
 		7FF9699E1C6C44DD00887A82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9699C1C6C44DD00887A82 /* LaunchScreen.storyboard */; };
 		7FF969A91C6C44DD00887A82 /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969A81C6C44DD00887A82 /* CarouselTests.swift */; };
 		7FF969B41C6C44DD00887A82 /* CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969B31C6C44DD00887A82 /* CarouselUITests.swift */; };
-		7FF969C21C6C45EC00887A82 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969C11C6C45EC00887A82 /* Common.swift */; };
 		7FF969C41C6C46A300887A82 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969C31C6C46A300887A82 /* IntroViewController.swift */; };
 		7FF969C71C6C547700887A82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969C61C6C547700887A82 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F0806061C6FAEC8004BD521 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7F17F6A41C6FA9A3009BFF09 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7F24580F1C6EDE9200201778 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsScreenViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		7FF969AF1C6C44DD00887A82 /* CarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF969B31C6C44DD00887A82 /* CarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUITests.swift; sourceTree = "<group>"; };
 		7FF969B51C6C44DD00887A82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FF969C11C6C45EC00887A82 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7FF969C31C6C46A300887A82 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		7FF969C61C6C547700887A82 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +141,7 @@
 		7FF969871C6C44DC00887A82 = {
 			isa = PBXGroup;
 			children = (
+				7F0806061C6FAEC8004BD521 /* Common.swift */,
 				7FF969921C6C44DD00887A82 /* Carousel */,
 				7FF969A71C6C44DD00887A82 /* CarouselTests */,
 				7FF969B21C6C44DD00887A82 /* CarouselUITests */,
@@ -161,7 +162,6 @@
 		7FF969921C6C44DD00887A82 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				7FF969C11C6C45EC00887A82 /* Common.swift */,
 				7FF969931C6C44DD00887A82 /* AppDelegate.swift */,
 				7FF969951C6C44DD00887A82 /* ViewController.swift */,
 				7FF969971C6C44DD00887A82 /* Main.storyboard */,
@@ -357,8 +357,8 @@
 				7F2458101C6EDE9200201778 /* CreateViewController.swift in Sources */,
 				7FF969961C6C44DD00887A82 /* ViewController.swift in Sources */,
 				7F4CAA271C6CECD10098EA7A /* ImageTimelineViewController.swift in Sources */,
-				7FF969C21C6C45EC00887A82 /* Common.swift in Sources */,
 				7FF969941C6C44DD00887A82 /* AppDelegate.swift in Sources */,
+				7F0806071C6FAEC8004BD521 /* Common.swift in Sources */,
 				7F3E092E1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift in Sources */,
 				7FF969C71C6C547700887A82 /* LoginViewController.swift in Sources */,
 				7F4CAA251C6C7E7F0098EA7A /* TutorialViewController.swift in Sources */,
