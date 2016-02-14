@@ -190,8 +190,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vlc-5E-ckx">
-                                        <rect key="frame" x="281" y="65" width="38" height="42"/>
+                                        <rect key="frame" x="279" y="65" width="38" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPresstutorialBannerClose:" destination="yfb-hz-5Rv" eventType="touchUpInside" id="x7q-ut-GKF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>

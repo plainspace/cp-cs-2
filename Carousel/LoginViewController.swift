@@ -36,6 +36,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     var initialYbuttonParentView: CGFloat!
     var offsetbuttonParentView: CGFloat!
     
+    // had to add this manually; the Common.swift file wasn't working
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(

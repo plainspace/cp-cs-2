@@ -27,18 +27,43 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate {
     
     }
     
+    var initialYtimelineScrollView: CGFloat!
+    var offsettimelineScrollView: CGFloat!
+    
+    var initialYtutorialBannerView: CGFloat!
+    var offsettutorialBannerView: CGFloat!
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
+    
+    @IBAction func didPresstutorialBannerClose(sender: AnyObject) {
+//        defaults.setBool(true, forKey: "dismissTutorial")
+//        UIView.animateWithDuration(0.3, animations: {self.didPresstutorialBannerClose()
+//        })
+
+        timelineScrollView.frame.origin.y = -44
+//        timelineScrollView.frame.size.height = 467
+        tutorialBannerView.alpha = 0
+        tutorialButton.alpha = 0
+        tutorialBannerCloseButton.alpha = 0
+        tutorialButton.enabled = false
+        tutorialBannerCloseButton.enabled = false
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrubberScrollView.contentSize = CGSize(width: 1000, height: 36)
         
+        //        scrubberScrollView.contentSize = CGSize(width: 1000, height: 36)
+        
+        //        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1673)
+        
+        
+        imageTimelineScrollView.contentSize = timelineImage.image!.size
+        scrubberScrollView.contentSize = scrubberImageView.image!.size
         scrubberScrollView.delegate = self
-        
-        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1673)
-        
         imageTimelineScrollView.delegate = self
-
-
+        
         // Do any additional setup after loading the view.
     }
 
