@@ -23,82 +23,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var buttonParentView: UIView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+
     @IBOutlet weak var signInButton: UIButton!
     
     @IBAction func didTouchBackButton(sender: AnyObject) {
         // dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func didTapSignInButton(sender: AnyObject) {
-        
-        view.endEditing(false)
-        
-        print("Sign In Button Pressed")
-        
-        if (emailField.text!.isEmpty) {
-            
-            let alertController = UIAlertController(title: "Email required", message: "Please enter your email address", preferredStyle: .Alert)
-            
-            // create a cancel action
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                // handle cancel response here. Doing nothing will dismiss the view.
-            }
-            // add the cancel action to the alertController
-            alertController.addAction(cancelAction)
-            
-            presentViewController(alertController, animated: true) {
-                // optional code for what happens after the alert controller has finished presenting
-            }
-            
-        } else if (passwordField.text!.isEmpty) {
-
-            let alertController = UIAlertController(title: "Password required", message: "Please enter your password", preferredStyle: .Alert)
-            
-            // create a cancel action
-            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                // handle cancel response here. Doing nothing will dismiss the view.
-            }
-            // add the cancel action to the alertController
-            alertController.addAction(cancelAction)
-            
-            presentViewController(alertController, animated: true) {
-                // optional code for what happens after the alert controller has finished presenting
-            }
-            
-        } else {
-            
-            self.activityIndicator.startAnimating()
-            
-            delay(2, closure: { () -> () in
-
-                if (self.emailField.text == "asdf" && self.passwordField.text == "asdf") {
-                    
-                    print("Logging in")
-                    self.activityIndicator.stopAnimating()
-                    self.performSegueWithIdentifier("tutorialViewSegue", sender: self)
-                    
-                } else {
-                                    
-                    self.activityIndicator.stopAnimating()
-    
-                    print("Can't log in. Email or password are missing or incorrect")
-    
-                    let alertController = UIAlertController(title: "Whoops! ", message: "Wrong user name and password", preferredStyle: .Alert)
-    
-                    // create a cancel action
-                    let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
-                        // handle cancel response here. Doing nothing will dismiss the view.
-                    }
-                    // add the cancel action to the alertController
-                    alertController.addAction(cancelAction)
-    
-                    self.presentViewController(alertController, animated: true) {
-                        // optional code for what happens after the alert controller has finished presenting
-                    }
-                }
-            })
-        }
     }
     
     var initialYfieldParentView: CGFloat!
@@ -106,6 +35,48 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     var initialYbuttonParentView: CGFloat!
     var offsetbuttonParentView: CGFloat!
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    @IBAction func didPressSignin(sender: AnyObject) {
+        if emailField.text == "asdf" && passwordField.text == "asdf" {
+            activityIndicator.startAnimating()
+            delay(2) {
+                self.activityIndicator.stopAnimating()
+                self.performSegueWithIdentifier("tutorialSegue", sender:self)
+            }
+        } else if emailField.text!.isEmpty {
+            let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            presentViewController(alertController, animated: true) {}
+            alertController.addAction(okAction)
+            
+        } else if passwordField.text!.isEmpty {
+            let alertController = UIAlertController(title: "Password Required", message: "Please enter your password", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            presentViewController(alertController, animated: true) {}
+            alertController.addAction(okAction)
+        } else {
+            activityIndicator.startAnimating()
+            delay(2) {
+                self.activityIndicator.stopAnimating()
+                let alertController = UIAlertController(title: "Whoops!", message: "We're sorry, but we couldn't find an account with those credentials.", preferredStyle: .Alert)
+                let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                }
+                self.presentViewController(alertController, animated: true) {}
+                alertController.addAction(okAction)
+            }
+        }
+    }
     
     @IBAction func didTap(sender: AnyObject) {
         view.endEditing(true)
@@ -128,8 +99,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-
-
+        
+        // user_email = defaults.objectForKey("email") as! String
+        // user_password = defaults.objectForKey("password") as! String
+        
+        // print(user_email)
+        // print(user_password)
+        
+        // definesPresentationContext = true
+        
         // Do any additional setup after loading the view.
     }
     
@@ -185,7 +163,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

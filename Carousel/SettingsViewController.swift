@@ -18,10 +18,22 @@ class SettingsViewController: UIViewController, UIScrollViewDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBOutlet weak var didPressSignOut: UIButton!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        settingsScrollView.contentSize = CGSize(width: 320, height: 760)
+        
+        settingsScrollView.delegate = self
+        
+        // performSegueWithIdentifier("signOutSegue", sender: self)
+        
+        definesPresentationContext = true
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func didPressSignOut(sender: AnyObject) {
-    
+        
         let alertController = UIAlertController(title: "Are you sure you want to log out?", message: "", preferredStyle: .ActionSheet)
         
         let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
@@ -41,21 +53,9 @@ class SettingsViewController: UIViewController, UIScrollViewDelegate {
         presentViewController(alertController, animated: true) {
             // optional code for what happens after the alert controller has finished presenting
         }
-
+        
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        settingsScrollView.contentSize = CGSize(width: 320, height: 760)
-        
-        settingsScrollView.delegate = self
-        
-        // performSegueWithIdentifier("signOutSegue", sender: self)
-        
-        // Do any additional setup after loading the view.
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
