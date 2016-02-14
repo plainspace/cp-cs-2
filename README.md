@@ -14,7 +14,7 @@ The purpose of this homework is to leverage views, view properties, and events t
   - [x] Upon tapping the Sign In button.
     - [x] If the username or password fields are empty, user sees an error alert.
     - [x] If credentials are incorrect, user sees a loading indicator for 2 seconds followed by an error alert.
-    - [ ] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
+    - [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
   - [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   - [x] Optional: On appear, scale the form up and fade it in.
 - [x] Optional: Create a Dropbox
@@ -37,7 +37,7 @@ The purpose of this homework is to leverage views, view properties, and events t
   - [x] User can log out
 - [ ] Optional: Learn more about Carousel
   - [x] Optional: Show the "Learn more about Carousel" button in the photo timeline.
-  - [ ] Optional: Tap the X to dismiss the banner
+  - [x] Optional: Tap the X to dismiss the banner
   - [ ] Optional: Track the 3 events:
     - [ ] View a photo full screen
     - [ ] Swipe left and right
