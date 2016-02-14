@@ -8,8 +8,19 @@
 
 import UIKit
 
-class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
+class ImageTimelineViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var timelineScrollView: UIScrollView!
+    @IBOutlet weak var timelineImage: UIImageView!
+    
+    @IBOutlet weak var scrubberScrollView: UIScrollView!
+    @IBOutlet weak var scrubberImageView: UIImageView!
+    
+    @IBOutlet weak var tutorialBannerView: UIImageView!
+    @IBOutlet weak var tutorialButton: UIButton!
+    @IBOutlet weak var tutorialBannerCloseButton: UIButton!
+    
+    
     @IBOutlet weak var imageTimelineScrollView: UIScrollView!
     
     @IBAction func didTapConversationsButton(sender: AnyObject) {
@@ -18,6 +29,10 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrubberScrollView.contentSize = CGSize(width: 1000, height: 36)
+        
+        scrubberScrollView.delegate = self
         
         imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1673)
         
