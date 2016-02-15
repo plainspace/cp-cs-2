@@ -41,7 +41,7 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate {
 //        })
 
         timelineScrollView.frame.origin.y = -44
-//        timelineScrollView.frame.size.height = 467
+        timelineScrollView.frame.size.height = 574 // why! it still isn't right
         tutorialBannerView.alpha = 0
         tutorialButton.alpha = 0
         tutorialBannerCloseButton.alpha = 0
