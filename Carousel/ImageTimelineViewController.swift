@@ -56,10 +56,10 @@ class ImageTimelineViewController: UIViewController, UIScrollViewDelegate {
         
         //        scrubberScrollView.contentSize = CGSize(width: 1000, height: 36)
         
-        //        imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1673)
+                imageTimelineScrollView.contentSize = CGSize(width: 320, height: 1696)
         
         
-        imageTimelineScrollView.contentSize = timelineImage.image!.size
+//        imageTimelineScrollView.contentSize = timelineImage.image!.size
         scrubberScrollView.contentSize = scrubberImageView.image!.size
         scrubberScrollView.delegate = self
         imageTimelineScrollView.delegate = self

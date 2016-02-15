@@ -203,13 +203,9 @@
                                 </subviews>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" id="wud-Eg-PCb">
-                                <rect key="frame" x="0.0" y="532" width="320" height="36"/>
+                                <rect key="frame" x="0.0" y="530" width="320" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scrubber" id="DZv-xa-8rf">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scrubber-1" id="4pa-uk-G2P" userLabel="Scrubber Long Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="1000" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -682,7 +678,6 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
-        <image name="scrubber" width="320" height="36"/>
         <image name="scrubber-1" width="1000" height="36"/>
         <image name="settings" width="320" height="695"/>
         <image name="settings_nav" width="320" height="64"/>
@@ -696,6 +691,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="V40-VA-GMf"/>
-        <segue reference="ghX-Y2-d3b"/>
+        <segue reference="haF-Wc-gIp"/>
     </inferredMetricsTieBreakers>
 </document>
