@@ -195,13 +195,13 @@
 		7FF969C51C6C46A900887A82 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7F17F6A41C6FA9A3009BFF09 /* TermsViewController.swift */,
 				7F24580F1C6EDE9200201778 /* CreateViewController.swift */,
-				7FF969C61C6C547700887A82 /* LoginViewController.swift */,
-				7F4CAA2A1C6D8EF20098EA7A /* SettingsViewController.swift */,
 				7F3E092D1C6E9A3700B2CBE1 /* ConversationsScreenViewController.swift */,
 				7F4CAA261C6CECD10098EA7A /* ImageTimelineViewController.swift */,
 				7FF969C31C6C46A300887A82 /* IntroViewController.swift */,
+				7FF969C61C6C547700887A82 /* LoginViewController.swift */,
+				7F4CAA2A1C6D8EF20098EA7A /* SettingsViewController.swift */,
+				7F17F6A41C6FA9A3009BFF09 /* TermsViewController.swift */,
 				7F4CAA241C6C7E7F0098EA7A /* TutorialViewController.swift */,
 			);
 			name = "View Controllers";

@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhE-fe-dD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1627" y="-1317"/>
+            <point key="canvasLocation" x="1671" y="-1355"/>
         </scene>
         <!--Image Timeline View Controller-->
         <scene sceneID="b8g-NC-YDl">
@@ -482,9 +482,13 @@
                                                 <rect key="frame" x="21" y="0.0" width="277" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
-                                                    <segue destination="pkm-qR-lWd" kind="modal" id="kIm-88-wgN"/>
+                                                    <action selector="didTouchCreate:" destination="YlQ-S7-jsK" eventType="touchUpInside" id="FOR-VJ-vPB"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="rW5-TG-Tv9">
+                                                <rect key="frame" x="254" y="10" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -496,13 +500,6 @@
                                                 <rect key="frame" x="0.0" y="12" width="320" height="63"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UqW-VC-5rq">
-                                                <rect key="frame" x="103" y="261" width="51" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <segue destination="r4S-rN-ypC" kind="modal" id="mA4-c4-ggr"/>
-                                                </connections>
-                                            </button>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_form" id="I5R-8s-Jki">
                                                 <rect key="frame" x="0.0" y="80" width="320" height="192"/>
                                                 <autoresizingMask key="autoresizingMask"/>
@@ -535,6 +532,13 @@
                                                 <rect key="frame" x="0.0" y="267" width="320" height="33"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UqW-VC-5rq">
+                                                <rect key="frame" x="48" y="267.5" width="106" height="33.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <segue destination="r4S-rN-ypC" kind="modal" id="JM7-pO-IGY"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z6o-eu-tEh">
                                                 <rect key="frame" x="20" y="273" width="20" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -543,7 +547,7 @@
                                                 <state key="highlighted" image="check_box_selected"/>
                                                 <state key="focused" image="check_box_selected"/>
                                                 <connections>
-                                                    <action selector="checkBoxButton:" destination="YlQ-S7-jsK" eventType="touchUpInside" id="nLa-XE-AWL"/>
+                                                    <action selector="didTouchAgree:" destination="YlQ-S7-jsK" eventType="touchUpInside" id="ru0-11-gfe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -570,10 +574,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="rW5-TG-Tv9" id="tKt-WW-VHA"/>
+                        <outlet property="agreeButton" destination="Z6o-eu-tEh" id="iJL-N7-ww5"/>
                         <outlet property="buttonParentView" destination="vwK-wj-lXO" id="tIi-Et-D2m"/>
                         <outlet property="checkBoxButton" destination="Z6o-eu-tEh" id="OXR-0v-uCp"/>
                         <outlet property="createParentView" destination="qr2-ZK-Dqz" id="Tpg-H3-NKe"/>
                         <outlet property="createScrollView" destination="0cc-ic-YfC" id="AvM-bN-aDu"/>
+                        <outlet property="emailField" destination="ak7-YZ-ndi" id="OIK-Us-BIU"/>
+                        <outlet property="firstNameField" destination="HRf-yu-V7u" id="rWy-rT-c7w"/>
+                        <outlet property="lastNameField" destination="teW-Wj-M2k" id="KHi-BV-caW"/>
+                        <outlet property="passwordField" destination="2YG-wI-koq" id="O5m-Fg-Sor"/>
+                        <segue destination="pkm-qR-lWd" kind="modal" identifier="tutorialSegue" id="V40-VA-GMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KJ-sL-edW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -583,7 +594,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="70" y="-1173"/>
+            <point key="canvasLocation" x="54" y="-1185"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="yev-aB-c8L">
@@ -684,7 +695,7 @@
         <image name="welcome4" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3jD-m4-E7t"/>
-        <segue reference="haF-Wc-gIp"/>
+        <segue reference="V40-VA-GMf"/>
+        <segue reference="ghX-Y2-d3b"/>
     </inferredMetricsTieBreakers>
 </document>
