@@ -14,13 +14,18 @@ The purpose of this homework is to leverage views, view properties, and events t
   - [x] Upon tapping the Sign In button.
     - [x] If the username or password fields are empty, user sees an error alert.
     - [x] If credentials are incorrect, user sees a loading indicator for 2 seconds followed by an error alert.
-    - [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
+    - [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Tutorial screens.
   - [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   - [x] Optional: On appear, scale the form up and fade it in.
 - [x] Optional: Create a Dropbox
-  - [x] Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
+  - [x] Optional: Tapping in the first name, last name, email or password fields reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
   - [x] Optional: Tapping the Agree to Terms checkbox selects the checkbox.
   - [x] Optional: Tapping on Terms shows a webview with the terms.
+  - [x] Upon tapping the Create a Dropbox button.
+    - [x] If the any of the fields are empty, user sees an error alert.
+    - [x] If the fields are not empy, user sees a loading indicator for 2 seconds followed by a transition to the Tutorial screens.
+  - [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
+  - [x] Optional: On appear, scale the form up and fade it in.
   - [x] Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
 - [x] Tutorial Screens
   - [x] User can page between the screens
