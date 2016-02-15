@@ -54,6 +54,6 @@ The purpose of this homework is to leverage views, view properties, and events t
 
 Walkthrough of requirements and optionals:
 
-![Video Walkthrough](db-1.gif)
+![Video Walkthrough](carousel.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
