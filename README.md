@@ -1,4 +1,4 @@
-# Week 1 Project: Carousel
+# Week 2 Project: Carousel
 _Due:_ Sunday, February 14th at 11:59pm  
 _Time spent:_ 16 hrs
 
