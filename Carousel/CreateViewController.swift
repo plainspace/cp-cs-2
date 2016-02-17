@@ -26,7 +26,9 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     }
     
     var defaults = NSUserDefaults.standardUserDefaults()
-
+    
+    var animateForm: Bool! = true
+    
     var initialYcreateParentView: CGFloat!
     var offsetcreateParentView: CGFloat!
     
@@ -134,7 +136,9 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        let transform = CGAffineTransformMakeScale(0.8, 0.8)
+//        let viewedTerms = NSUserDefaults.standardUserDefaults().boolForKey("animateForm")
+        
+        let transform = CGAffineTransformMakeScale(0.2, 0.2)
         
         createParentView.transform = transform
         

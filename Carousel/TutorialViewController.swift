@@ -20,6 +20,52 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var spinButton: UIButton!
     
+    
+//    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+//        // Get the current page based on the scroll offset
+//        let page : Int = Int(round(scrollView.contentOffset.x / 320))
+//        
+//        // Set the current page, so the dots will update
+//        pageControl.currentPage = page
+//        
+//        let transform = CGAffineTransformMakeScale(0.2, 0.2)
+//        
+//        spinButtonImage.transform = transform
+//        spinButtonImage.alpha = 0
+//        
+//        if page == 3 {
+//            pageControl.hidden = true
+//            
+//            UIView.animateWithDuration(0.3) { () -> Void in
+//                
+//                self.spinButtonImage.transform = CGAffineTransformIdentity
+//                self.spinButtonImage.alpha = 1
+//                
+//            }
+//            
+//        } else {
+//            pageControl.hidden  = false
+//            spinButtonImage.alpha = 0
+//        }
+//        
+//    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        // Get the current page based on the scroll offset
+        let page : Int = Int(round(scrollView.contentOffset.x / 320))
+        // Set the current page, so the dots will update
+        pageControl.currentPage = page
+        if page == 3 {
+            pageControl.hidden = true
+            UIView.animateWithDuration(0.5) { () -> Void in
+                self.spinButtonImage.alpha = 1
+            }
+        } else {
+            pageControl.hidden = false
+            spinButtonImage.alpha = 0
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,34 +95,6 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
             self.spinButtonImage.alpha = 1
             
         }
-    }
-    
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        // Get the current page based on the scroll offset
-        let page : Int = Int(round(scrollView.contentOffset.x / 320))
-        
-        // Set the current page, so the dots will update
-        pageControl.currentPage = page
-        
-        let transform = CGAffineTransformMakeScale(0.2, 0.2)
-        
-        spinButtonImage.transform = transform
-        spinButtonImage.alpha = 0
-        
-        if page == 3 {
-            pageControl.hidden = true
-            
-            UIView.animateWithDuration(0.3) { () -> Void in
-                
-                self.spinButtonImage.transform = CGAffineTransformIdentity
-                self.spinButtonImage.alpha = 1
-                
-            }
-            
-        } else {
-            pageControl.hidden  = false
-        }
-        
     }
     
     override func didReceiveMemoryWarning() {
